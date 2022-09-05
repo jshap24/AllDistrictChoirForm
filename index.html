@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <img src="img/vcda.png">
     <h1>HS All-District Choir Auditions District IX</h1>
     <p id='subtitle'>Adjudicator Score Sheet (HS)</p>
     <form action="results.html" method="GET" autocomplete="on">
         <div id="judgeName">
-            <h2>Judge's Name</h2>
+            <h3>Judge's Name</h3>
             <div>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" required>
@@ -23,12 +24,12 @@
             </div>
         </div>
         <div id="Auditionee Number">
-            <h2>Auditionee Number</h2>
+            <h3>Auditionee Number</h3>
             <label for="number">Auditionee Number:</label><br><br>
              <input type="text" id="audNumber" name="number" placeholder="ex: 23" size='5' maxlength='3' required>
         </div>
         <div id="Voice Part">
-            <h2>Voice Part</h2>
+            <h3>Voice Part</h3>
                 <label for="voicepart">Choose a Voice Part</label>
                 <select id="voicepart" name="voicepart" required>
                 <option value="TS1">TS1</option>
@@ -46,7 +47,8 @@
                 </select>
         </div>
         <div id="tone">
-            <h2>Tone Rating</h2>
+            <h3>Tone Rating</h3>
+            <img src="img/Tone.5f494db7e3fb29.14483723.PNG">
                 <div class="ratingradio" id="toneradio">
                     <input type="radio" id="15t" name="tone" value="15" required>
                     <label for="15t">15</label>
@@ -94,7 +96,8 @@
                     <label for="1t">1</label> 
         </div>
         <div id="intonation">
-            <h2>Intonation Rating</h2>
+            <h3>Intonation Rating</h3>
+            <img src="img/intonation.5f494e8dec2747.36095646.PNG">
                 <div class="ratingradio" id="intonationradio">
                     <input type="radio" name="intonation" id="15i" value="15" required>
                     <label for="15i">15</label>
@@ -144,7 +147,8 @@
         </div>
 
         <div id="technical-accuracy">
-            <h2>Technical Accuracy</h2>
+            <h3>Technical Accuracy</h3>
+            <img src="img/technical accuracy.5f494e978968a7.28259677.PNG">
                 <div class="ratingradio" id="technical-accuracy-radio">
                     <input type="radio" name="technical-accuracy" id="15a" value="15">
                     <label for="15a">15</label>
@@ -193,7 +197,7 @@
                 </div>
         </div>
         <div id="phraserating">
-            <h2>Feeling of Phrase</h2>
+            <h3>Feeling of Phrase</h3>
                 <div class="ratingradio" id="feeling-of-phrase-radio">
                     <input type="radio" id="10p" name="phrase-radio" value="10" required>
                     <label for="10p">10</label> 
@@ -225,9 +229,10 @@
                     <input type="radio" id="1p" name="phrase-radio" value="1">
                     <label for="1p">1</label> 
                 </div>
+                <img src="img/feeling of phrase.5f494ea0d85053.10614621.PNG">
         </div>
         <div id="dictionrating">
-            <h2>Diction</h2>
+            <h3>Diction</h3>
                 <div class="ratingradio" id="diction-rating-radio">
                     <input type="radio" id="10d" name="diction-radio" value="10" required>
                     <label for="10d">10</label> 
@@ -259,25 +264,141 @@
                     <input type="radio" id="1d" name="diction-radio" value="1">
                     <label for="1d">1</label> 
                 </div>
+                <img src="img/diction.5f494fd8328d22.44814188.PNG">
         </div>
         <div id="prepared-piece-comments">
-            <h2>Prepared Piece (Song) Comments:</h2>
+            <h3>Prepared Piece (Song) Comments:</h3>
             <textarea name="paragraph-for-comments" cols="50" rows="10"></textarea>
         </div>
+        <div>
+            <h2>Sight-Reading</h2>
+            <p>Pitch (out of 15), Rhythm (out of 20)</p>
+            <h3>Sight-Reading Rhythm</h3>
+            <div class="ratingradio" id="sr-rhythm">
+                <input type="radio" id="20r" name="sr-rhythm-radio" value="20">
+                <label for="20r">20</label>
+
+                <input type="radio" id="19r" name="sr-rhythm-radio" value="19">
+                <label for="19r">19</label>
+                
+                <input type="radio" id="18r" name="sr-rhythm-radio" value="18">
+                <label for="18r">18</label>
+
+                <input type="radio" id="17r" name="sr-rhythm-radio" value="17">
+                <label for="17r">17</label>
+                
+                <input type="radio" id="16r" name="sr-rhythm-radio" value="16">
+                <label for="16r">16</label>
+
+                <input type="radio" id="15r" name="sr-rhythm-radio" value="15">
+                <label for="15r">15</label>
+            
+                <input type="radio" id="14r" name="sr-rhythm-radio" value="14">
+                <label for="14r">14</label>
+            
+                <input type="radio" id="13r" name="sr-rhythm-radio" value="13">
+                <label for="13r">13</label> 
+
+                <input type="radio" id="12r" name="sr-rhythm-radio" value="12">
+                <label for="12r">12</label> 
+
+                <input type="radio" id="11r" name="sr-rhythm-radio" value="11">
+                <label for="11r">11</label>
+                
+                <input type="radio" id="10r" name="sr-rhythm-radio" value="10">
+                <label for="10r">10</label> 
+
+                <input type="radio" id="9r" name="sr-rhythm-radio" value="9">
+                <label for="9r">9</label> 
+
+                <input type="radio" id="8r" name="sr-rhythm-radio" value="8">
+                <label for="8r">8</label> 
+
+                <input type="radio" id="7r" name="sr-rhythm-radio" value="7">
+                <label for="7r">7</label> 
+
+                <input type="radio" id="6r" name="sr-rhythm-radio" value="6">
+                <label for="6r">6</label> 
+
+                <input type="radio" id="5r" name="sr-rhythm-radio" value="5">
+                <label for="5r">5</label> 
+
+                <input type="radio" id="4r" name="sr-rhythm-radio" value="4">
+                <label for="4r">4</label> 
+
+                <input type="radio" id="3r" name="sr-rhythm-radio" value="3">
+                <label for="3r">3</label> 
+
+                <input type="radio" id="2r" name="sr-rhythm-radio" value="2">
+                <label for="2r">2</label> 
+
+                <input type="radio" id="1r" name="sr-rhythm-radio" value="1">
+                <label for="1r">1</label>
+                <img src="img/sr rhythm.5f494fe019d042.29753419.PNG"> 
+            </div>
+            <h3>Sight-Reading Pitch</h3>
+            <div class="ratingradio" id="sr-pitch" required>
+                <input type="radio" id="15sp" name="sr-pitch-radio" value="15">
+                <label for="15sp">15</label>
+            
+                <input type="radio" id="14sp" name="sr-pitch-radio" value="14">
+                <label for="14sp">14</label>
+            
+                <input type="radio" id="13sp" name="sr-pitch-radio" value="13">
+                <label for="13sp">13</label> 
+
+                <input type="radio" id="12sp" name="sr-pitch-radio" value="12">
+                <label for="12sp">12</label> 
+
+                <input type="radio" id="11sp" name="sr-pitch-radio" value="11">
+                <label for="11sp">11</label>
+                
+                <input type="radio" id="10sp" name="sr-pitch-radio" value="10">
+                <label for="10sp">10</label> 
+
+                <input type="radio" id="9sp" name="sr-pitch-radio" value="9">
+                <label for="9sp">9</label> 
+
+                <input type="radio" id="8sp" name="sr-pitch-radio" value="8">
+                <label for="8sp">8</label> 
+
+                <input type="radio" id="7sp" name="sr-pitch-radio" value="7">
+                <label for="7sp">7</label> 
+
+                <input type="radio" id="6sp" name="sr-pitch-radio" value="6">
+                <label for="6sp">6</label> 
+
+                <input type="radio" id="5sp" name="sr-pitch-radio" value="5">
+                <label for="5sp">5</label> 
+
+                <input type="radio" id="4sp" name="sr-pitch-radio" value="4">
+                <label for="4sp">4</label> 
+
+                <input type="radio" id="3sp" name="sr-pitch-radio" value="3">
+                <label for="3sp">3</label> 
+
+                <input type="radio" id="2sp" name="sr-pitch-radio" value="2">
+                <label for="2sp">2</label> 
+
+                <input type="radio" id="1sp" name="sr-pitch-radio" value="1">
+                <label for="1sp">1</label> 
+                <img src="img/sr pitch.5f494eafbcabe2.20810542.PNG">
+            </div>
+        </div>
         <div id="sr-comments">
-            <h2>Sight-Reading Comments:</h2>
+            <h3>Sight-Reading Comments:</h3>
             <textarea name="paragraph-for-comments" cols="50" rows="5"></textarea>
         </div>
         <div id="scorebox">
-            <h2>Total Score</h2>
+            <h3>Total Score</h3>
             <div id="totalscore"></div>
         </div>
         <div id="judge-email">
-            <h2>Judge's Email (to serve as signature confirmation)</h2>
+            <h3>Judge's Email (to serve as signature confirmation)</h3>
             <input type="email" id="email" placeholder="ex: shapirJA@pwcs.edu" size='30' required>
         </div>
         <div id="signature-pad">
-            <h2>Judge's Signature</h2>
+            <h3>Judge's Signature</h3>
             <canvas id="signature-pad" class="signature-pad" width="300px" height="200px"></canvas>
 
             <p>
