@@ -8,47 +8,63 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <img src="img/vcda.png">
+    <header>
+    <img src="img/vcda.png" id="header-image">
     <h1>HS All-District Choir Auditions District IX</h1>
     <p id='subtitle'>Adjudicator Score Sheet (HS)</p>
-    <form action="results.html" method="GET" autocomplete="on">
+    </header>
+    <form action="connect.php" id="district-form" method="post" autocomplete="on">
+        <div class=formContainer>
+<fieldset>
+    <legend>Setup</legend>
         <div id="judgeName">
             <h3>Judge's Name</h3>
             <div>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" required>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
             </div>
             <div>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" required>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
             </div>
         </div>
         <div id="Auditionee Number">
             <h3>Auditionee Number</h3>
-            <label for="number">Auditionee Number:</label><br><br>
-             <input type="text" id="audNumber" name="number" placeholder="ex: 23" size='5' maxlength='3' required>
+            <label for="audNumber">Auditionee Number:</label><br><br>
+             <input type="text" id="audNumber" name="audNumber" placeholder="ex: A2-003" size='12' maxlength='6' required>
         </div>
         <div id="Voice Part">
-            <h3>Voice Part</h3>
-                <label for="voicepart">Choose a Voice Part</label>
-                <select id="voicepart" name="voicepart" required>
-                <option value="TS1">TS1</option>
-                <option value="TS2">TS2</option>
-                <option value="TA1">TA1</option>
-                <option value="TA2">TA2</option>
-                <option value="S1">S1</option>
-                <option value="S2">S2</option>
-                <option value="A1">A1</option>
-                <option value="A2">A2</option>
-                <option value="T1">T1</option>
-                <option value="T2">T2</option>
-                <option value="B1">B1</option>
-                <option value="B2">B2</option>
-                </select>
+            <h3>Auditionee's Voice Part</h3>
+                <label for="voicePart"></label>
+                <select id="voicePart" name="voicePart" required>
+                    <option disabled selected value> -- select an option -- </option>
+                <optgroup label="Treble Choir">
+                    <option value="TS1">TS1</option>
+                    <option value="TS2">TS2</option>
+                    <option value="TA1">TA1</option>
+                    <option value="TA2">TA2</option>
+                </optgroup>
+                <optgroup label="Mixed Choir">
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="T1">T1</option>
+                    <option value="T2">T2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                </optgroup>
+            </select>
         </div>
+</fieldset>
         <div id="tone">
             <h3>Tone Rating</h3>
-            <img src="img/Tone.5f494db7e3fb29.14483723.PNG">
+            <ul>
+                <li>Healthy tone</li>
+                <li>Focus</li>
+                <li>Breath management</li>
+            </ul>
+            
                 <div class="ratingradio" id="toneradio">
                     <input type="radio" id="15t" name="tone" value="15" required>
                     <label for="15t">15</label>
@@ -94,10 +110,15 @@
 
                     <input type="radio" id="1t" name="tone" value="1">
                     <label for="1t">1</label> 
-        </div>
+                <img src="img/Tone Cropped.png">
+                </div>
         <div id="intonation">
             <h3>Intonation Rating</h3>
-            <img src="img/intonation.5f494e8dec2747.36095646.PNG">
+            <ul>
+                <li>Note accuracy</li>
+                <li>Intonation</li>
+                <li>Pitch center</li>
+            </ul>
                 <div class="ratingradio" id="intonationradio">
                     <input type="radio" name="intonation" id="15i" value="15" required>
                     <label for="15i">15</label>
@@ -143,61 +164,72 @@
 
                     <input type="radio" id="1i" name="intonation" value="1">
                     <label for="1i">1</label> 
+                <img src="img/intonation.5f494e8dec2747.36095646.PNG">
                 </div>
         </div>
 
         <div id="technical-accuracy">
             <h3>Technical Accuracy</h3>
-            <img src="img/technical accuracy.5f494e978968a7.28259677.PNG">
+            <ul>
+                <li>Tempo</li>
+                <li>Precision</li>
+            </ul>
+            
                 <div class="ratingradio" id="technical-accuracy-radio">
-                    <input type="radio" name="technical-accuracy" id="15a" value="15">
+                    <input type="radio" name="technicalAccuracy" id="15a" value="15">
                     <label for="15a">15</label>
                 
-                    <input type="radio" id="14a" name="technical-accuracy" value="14">
+                    <input type="radio" id="14a" name="technicalAccuracy" value="14">
                     <label for="14a">14</label>
                 
-                    <input type="radio" id="13a" name="technical-accuracy" value="13">
+                    <input type="radio" id="13a" name="technicalAccuracy" value="13">
                     <label for="13a">13</label> 
 
-                    <input type="radio" id="12a" name="technical-accuracy" value="12">
+                    <input type="radio" id="12a" name="technicalAccuracy" value="12">
                     <label for="12a">12</label> 
 
-                    <input type="radio" id="11a" name="technical-accuracy" value="11">
+                    <input type="radio" id="11a" name="technicalAccuracy" value="11">
                     <label for="11a">11</label>
                     
-                    <input type="radio" id="10a" name="technical-accuracy" value="10">
+                    <input type="radio" id="10a" name="technicalAccuracy" value="10">
                     <label for="10a">10</label> 
 
-                    <input type="radio" id="9a" name="technical-accuracy" value="9">
+                    <input type="radio" id="9a" name="technicalAccuracy" value="9">
                     <label for="9a">9</label> 
 
-                    <input type="radio" id="8a" name="technical-accuracy" value="8">
+                    <input type="radio" id="8a" name="technicalAccuracy" value="8">
                     <label for="8a">8</label> 
 
-                    <input type="radio" id="7a" name="technical-accuracy" value="7">
+                    <input type="radio" id="7a" name="technicalAccuracy" value="7">
                     <label for="7a">7</label> 
 
-                    <input type="radio" id="6a" name="technical-accuracy" value="6">
+                    <input type="radio" id="6a" name="technicalAccuracy" value="6">
                     <label for="6a">6</label> 
 
-                    <input type="radio" id="5a" name="technical-accuracy" value="5">
+                    <input type="radio" id="5a" name="technicalAccuracy" value="5">
                     <label for="5a">5</label> 
 
-                    <input type="radio" id="4a" name="technical-accuracy" value="4">
+                    <input type="radio" id="4a" name="technicalAccuracy" value="4">
                     <label for="4a">4</label> 
 
-                    <input type="radio" id="3a" name="technical-accuracy" value="3">
+                    <input type="radio" id="3a" name="technicalAccuracy" value="3">
                     <label for="3a">3</label> 
 
-                    <input type="radio" id="2a" name="technical-accuracy" value="2">
+                    <input type="radio" id="2a" name="technicalAccuracy" value="2">
                     <label for="2a">2</label> 
 
-                    <input type="radio" id="1a" name="technical-accuracy" value="1">
+                    <input type="radio" id="1a" name="technicalAccuracy" value="1">
                     <label for="1a">1</label> 
+                <img src="img/technical accuracy.5f494e978968a7.28259677.PNG">
                 </div>
         </div>
         <div id="phraserating">
             <h3>Feeling of Phrase</h3>
+            <ul>
+                <li>Phrasing</li>
+                <li>Dynamics</li>
+                <li>Style</li>
+            </ul>
                 <div class="ratingradio" id="feeling-of-phrase-radio">
                     <input type="radio" id="10p" name="phrase-radio" value="10" required>
                     <label for="10p">10</label> 
@@ -268,7 +300,7 @@
         </div>
         <div id="prepared-piece-comments">
             <h3>Prepared Piece (Song) Comments:</h3>
-            <textarea name="paragraph-for-comments" cols="50" rows="10"></textarea>
+            <textarea name="comments" cols="50" rows="10"></textarea>
         </div>
         <div>
             <h2>Sight-Reading</h2>
@@ -387,7 +419,7 @@
         </div>
         <div id="sr-comments">
             <h3>Sight-Reading Comments:</h3>
-            <textarea name="paragraph-for-comments" cols="50" rows="5"></textarea>
+            <textarea name="comments" cols="50" rows="5"></textarea>
         </div>
         <div id="scorebox">
             <h3>Total Score</h3>
@@ -395,18 +427,20 @@
         </div>
         <div id="judge-email">
             <h3>Judge's Email (to serve as signature confirmation)</h3>
-            <input type="email" id="email" placeholder="ex: shapirJA@pwcs.edu" size='30' required>
+            <input type="email" id="email" name="email" placeholder="you@example.com" size='30' required>
+            <p class="help">Please enter a valid email address</p>
         </div>
         <div id="signature-pad">
             <h3>Judge's Signature</h3>
             <canvas id="signature-pad" class="signature-pad" width="300px" height="200px"></canvas>
 
             <p>
-                <button id="resetSign">Clear Signature</button>
+                <button type="button" id="resetSign">Clear Signature</button>
             </p>
 
         </div>
         <button type="submit">Submit judging!</button>
+    </div>
     </form>
 	<script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
